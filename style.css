@@ -1,0 +1,29 @@
+#header-container {
+    margin-right: auto;
+    margin-left: auto;
+    max-width: 1320px;
+}
+
+#header {
+    background-color: aqua;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#logo {
+    margin-right: auto;
+    padding-left: 12px;
+    white-space: nowrap;
+    text-decoration: none;
+}
+
+#nav-list {
+    padding-right: 12px;
+    list-style: none;
+    display: flex;
+}
+
+.nav-item {
+    padding: 0.5rem;
+}
