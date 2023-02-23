@@ -1,3 +1,17 @@
+html, body {
+    height: 100vh;
+}
+
+a {
+    text-decoration: none;
+}
+
+ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
 #header-container {
     margin-right: auto;
     margin-left: auto;
@@ -17,17 +31,37 @@
     margin-right: auto;
     padding-left: 1em;
     white-space: nowrap;
-    text-decoration: none;
 }
 
 #nav-list {
-    margin: 0;
-    padding: 0;
-    list-style: none;
     display: flex;
     flex-wrap: wrap;
 }
 
 .nav-item {
     padding: 1rem;
+}
+
+#footer-container {
+    margin-right: auto;
+    margin-left: auto;
+    max-width: 1320px;
+    display: flex;
+}
+
+#footer {
+    background-color: purple;
+    display: flex;
+    flex: 1;
+    justify-content: center;
+    align-items: center;
+}
+
+#notice {
+    margin-right: auto;
+}
+
+#sm-list {
+    display: flex;
+    flex-wrap: wrap;
 }
