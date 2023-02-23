@@ -1,67 +1,113 @@
 html, body {
-    height: 100vh;
+  height: 100vh;
 }
 
 a {
-    text-decoration: none;
+  text-decoration: none;
 }
 
 ul {
-    margin: 0;
-    padding: 0;
-    list-style: none;
+  margin: 0;
+  padding: 0;
+  list-style: none;
 }
 
 #header-container {
-    margin-right: auto;
-    margin-left: auto;
-    max-width: 1320px;
-    display: flex;
+  margin-right: auto;
+  margin-left: auto;
+  max-width: 1320px;
+  display: flex;
 }
 
 #header {
-    background-color: aqua;
-    display: flex;
-    flex: 1;
-    justify-content: center;
-    align-items: center;
+  background-color: aqua;
+  display: flex;
+  flex: 1;
+  justify-content: center;
+  align-items: center;
 }
 
 #logo {
-    margin-right: auto;
-    padding-left: 1em;
-    white-space: nowrap;
+  margin-right: auto;
+  padding-left: 1em;
+  white-space: nowrap;
 }
 
 #nav-list {
-    display: flex;
-    flex-wrap: wrap;
+  display: flex;
+  flex-wrap: wrap;
 }
 
 .nav-item {
-    padding: 1rem;
+  padding: 1rem;
+}
+
+#carousel {
+  max-width: 1000px;
+  position: relative;
+  margin: auto;
+}
+
+.slide {
+  display: none;
+}
+
+#prev, #next {
+  padding: 16px;
+  font-size: 24px;
+  font-weight: bold;
+  border-radius: 0 3px 3px 0;
+  cursor: pointer;
+  user-select: none;
+}
+
+#next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+#prev:hover, #next:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+
+#current-slide {
+  text-align: center;
+}
+
+.dot {
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbbbbb;
+  border-radius: 50%;
+  display: inline-block;
+  cursor: pointer;
+}
+
+.dot:hover, .active {
+  background-color: #717171;
 }
 
 #footer-container {
-    margin-right: auto;
-    margin-left: auto;
-    max-width: 1320px;
-    display: flex;
+  margin-right: auto;
+  margin-left: auto;
+  max-width: 1320px;
+  display: flex;
 }
 
 #footer {
-    background-color: purple;
-    display: flex;
-    flex: 1;
-    justify-content: center;
-    align-items: center;
+  background-color: purple;
+  display: flex;
+  flex: 1;
+  justify-content: center;
+  align-items: center;
 }
 
 #notice {
-    margin-right: auto;
+  margin-right: auto;
 }
 
 #sm-list {
-    display: flex;
-    flex-wrap: wrap;
+  display: flex;
+  flex-wrap: wrap;
 }
