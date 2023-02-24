@@ -111,6 +111,18 @@ body {
   text-align: center;
 }
 
+#cards {
+  display: grid;
+}
+
+.card {
+  height: clamp(164px, 40%, 360px);
+  width: clamp(72px, 12%, 240px);
+  background-color: green;
+  border: solid;
+  border-radius: 12px;
+}
+
 #footer-container {
   width: 100%;
   position: absolute;
