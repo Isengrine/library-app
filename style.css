@@ -6,6 +6,14 @@ a {
   text-decoration: none;
 }
 
+h1 {
+  font-size: 2.5rem;
+}
+
+p {
+  font-size: 1.25rem;
+}
+
 ul {
   margin: 0;
   padding: 0;
@@ -86,6 +94,16 @@ ul {
 
 .dot:hover, .active {
   background-color: #717171;
+}
+
+#intro-text-wrapper {
+  min-height: 840px;
+  max-width: 1000px;
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
 }
 
 #footer-container {
