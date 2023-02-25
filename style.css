@@ -51,8 +51,10 @@ ul {
   padding: 1rem;
 }
 
-body {
-  height: 100vh;
+#content {
+  max-width: 1320px;
+  margin-right: auto;
+  margin-left: auto;
 }
 
 #carousel {
@@ -111,16 +113,26 @@ body {
   text-align: center;
 }
 
+#submit-bar {
+  margin: 24px;
+  border: solid;
+  border-radius: 24px;
+}
+
 #cards {
   display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 400px));
 }
 
 .card {
-  height: clamp(164px, 40%, 360px);
-  width: clamp(72px, 12%, 240px);
-  background-color: green;
+  height: clamp(160px, 80%, 360px);
+  width: clamp(120px, 80%, 280px);
+  padding: 12px;
+  background-color: greenyellow;
   border: solid;
   border-radius: 12px;
+  justify-self: center;
+  align-self: center;
 }
 
 #footer-container {
