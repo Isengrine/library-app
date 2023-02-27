@@ -56,7 +56,7 @@ ul {
   max-width: 1320px;
   margin-right: auto;
   margin-left: auto;
-  padding-bottom: 2rem;
+  padding-bottom: 5rem;
 }
 
 #carousel {
@@ -106,8 +106,6 @@ ul {
 }
 
 #intro-text-wrapper {
-  min-height: 720px;
-  max-width: 1000px;
   margin: auto;
   display: flex;
   justify-content: center;
@@ -154,6 +152,8 @@ ul {
 }
 
 #modal-content {
+  width: 80%;
+  margin: 5% auto;
   background-color: white;
 }
 
@@ -188,7 +188,7 @@ ul {
 }
 
 #footer {
-  height: 24px;
+  height: 4rem;
   max-width: 1320px;
   background-color: purple;
   display: flex;
@@ -199,9 +199,20 @@ ul {
 
 #notice {
   margin-right: auto;
+  margin-left: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 #sm-list {
+  margin-right: 2rem;
   display: flex;
   flex-wrap: wrap;
+}
+
+.sm-logo {
+  height: 24px;
+  width: 24px;
+  margin: 12px;
 }
