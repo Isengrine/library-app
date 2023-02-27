@@ -8,5 +8,17 @@ function Book(title, author, pages, read) {
   }
 }
 
+const modal = document.getElementById("modal-box");
+const formBtn = document.getElementById("form-button");
+const modalClose = document.getElementById("modal-close");
+
 const book1 = new Book("Crime and Punishment", "Dostoievsky", "300", "not read");
 console.log(book1.info());
+
+formBtn.onclick = () => {
+  modal.style.display = "block";
+}
+
+modalClose.onclick = () => {
+  modal.style.display = "none";
+}

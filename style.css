@@ -148,13 +148,18 @@ ul {
   position: fixed;
   top: 0;
   left: 0;
-  display: block;
+  display: none;
   overflow: auto;
   z-index: 1;
 }
 
 #modal-content {
   background-color: white;
+}
+
+#modal-close:hover {
+  border: solid;
+  cursor: pointer;
 }
 
 #cards {
