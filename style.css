@@ -152,14 +152,21 @@ ul {
 }
 
 #modal-content {
-  width: 80%;
+  width: 40%;
   margin: 5% auto;
   background-color: white;
+  display: flex;
+  flex-direction: column;
 }
 
 #modal-close:hover {
   border: solid;
   cursor: pointer;
+}
+
+#form {
+  display: flex;
+  flex-direction: column;
 }
 
 #cards {
