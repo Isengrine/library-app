@@ -139,7 +139,7 @@ ul {
   padding-right: 16px;
 }
 
-#modal-box {
+#modal-box-background {
   height: 100%;
   width: 100%;
   background-color: rgba(0,0,0,0.4);
@@ -151,27 +151,54 @@ ul {
   z-index: 1;
 }
 
-#modal-content {
-  width: 40%;
+#modal-box {
+  width: 16%;
   margin: 5% auto;
+  padding: 1%;
   background-color: white;
+  border-radius: 12px;
   display: flex;
   flex-direction: column;
 }
 
+#modal-top {
+  margin-bottom: 8px;
+  display: flex;
+  align-items: center;
+}
+
+#modal-title {
+  margin-right: auto;
+}
+
+#modal-close {
+  font-size: 1.25rem;
+  padding: 0.25rem;
+  user-select: none;
+}
+
 #modal-close:hover {
-  border: solid;
+  background-color: #bbbbbb;
+  border-radius: 2px;
   cursor: pointer;
 }
 
 #form {
   display: flex;
   flex-direction: column;
+  gap: 8px;
+}
+
+#synopsis {
+  max-height: 240px;
+  resize: vertical;
 }
 
 #read {
   display: flex;
+  justify-content: center;
   align-items: center;
+  gap: 12px;
 }
 
 #read-check {

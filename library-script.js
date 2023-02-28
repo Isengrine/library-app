@@ -8,7 +8,7 @@ function Book(title, author, pages, read) {
   }
 }
 
-const modal = document.getElementById("modal-box");
+const modal = document.getElementById("modal-box-background");
 const formBtn = document.getElementById("form-button");
 const modalClose = document.getElementById("modal-close");
 
