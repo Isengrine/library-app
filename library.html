@@ -36,14 +36,18 @@
         <span id="modal-close">&times;</span>
         <form action="#" method="post" id="form">
           <legend>New Book</legend>
-          <input type="text" placeholder="Book Title">
-          <input type="text" placeholder="Author">
+          <input type="text" placeholder="Book Title" required>
+          <input type="text" placeholder="Author" required>
           <textarea name="synopsis" id="synopsis" cols="30" rows="3" placeholder="Book synopsis (optional)..."></textarea>
-          <label>
-            <input type="checkbox">
-          </label>
+          <section id="read">
+            <span>Read:</span>
+            <label id="read-check">
+              <input type="checkbox" id="checkbox">
+              <span id="slider"></span>
+            </label>
+          </section>
+          <button type="submit">Create</button>
         </form>
-        <button>Button</button>
       </div>
     </div>
     <!-- End of Modal Box -->
