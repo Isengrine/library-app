@@ -6,13 +6,15 @@ function bookObj(title, author, synopsis, read) {
 }
 
 function addBook() {
-  let bookTitle = document.getElementById("bookTitle").value;
-  let bookAuthor = document.getElementById("bookAuthor").value;
-  let synopsis = document.getElementById("synopsis").value;
-  let bookRead = document.getElementById("checkbox").checked;
-
-  const book = new bookObj(bookTitle, bookAuthor, synopsis, bookRead);
+  const book = new bookObj(bookTitle.value, bookAuthor.value, synopsis.value, bookRead.checked);
   books.push(book);
+}
+
+function clearForm() {
+  bookTitle.value = "";
+  bookAuthor.value = "";
+  synopsis.value = "";
+  bookRead.checked = false;
 }
 
 function createLibrary() {
@@ -65,10 +67,16 @@ function clearLibrary() {
 let books = [];
 
 const modal = document.getElementById("modal-box-background");
+const form = document.getElementById("form");
 const formBtn = document.getElementById("form-button");
 const modalClose = document.getElementById("modal-close");
 const submitBtn = document.getElementById("addBook");
 const cards = document.getElementById("cards");
+
+let bookTitle = document.getElementById("bookTitle");
+let bookAuthor = document.getElementById("bookAuthor");
+let synopsis = document.getElementById("synopsis");
+let bookRead = document.getElementById("checkbox");
 
 const book1 = new bookObj("Crime and Punishment", "Dostoievsky", "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eum id maiores ipsam dolor, animi accusantium maxime derpaderp", false);
 books.push(book1);
@@ -82,9 +90,13 @@ modalClose.onclick = () => {
   modal.style.display = "none";
 }
 
-submitBtn.onclick = () => {
-  addBook();
-  clearLibrary();
-  createLibrary();
-  modal.style.display = "none";
+submitBtn.onclick = (event) => {
+  event.preventDefault();
+  if (form.checkValidity()) {
+    addBook();
+    clearLibrary();
+    createLibrary();
+    clearForm();
+    modal.style.display = "none";
+  }
 }
