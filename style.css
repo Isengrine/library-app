@@ -199,27 +199,27 @@ ul {
   resize: vertical;
 }
 
-#read {
+.read {
   display: flex;
   justify-content: center;
   align-items: center;
   gap: 12px;
 }
 
-#read-check {
+.read-check {
   position: relative;
   display: inline-block;
   width: 36px;
   height: 24px;
 }
 
-#read input {
+.read input {
   opacity: 0;
   width: 0;
   height: 0;
 }
 
-#slider {
+.slider {
   position: absolute;
   top: 0;
   left: 0;
@@ -231,7 +231,7 @@ ul {
   transition: .25s;
 }
 
-#slider:before {
+.slider:before {
   position: absolute;
   content: "";
   height: 18px;
@@ -242,15 +242,15 @@ ul {
   border-radius: 50%;
   transition: .25s;
 }
-input:checked + #slider {
+input:checked + .slider {
   background-color: #2196F3;
 }
 
-input:focus + #slider {
+input:focus + .slider {
   box-shadow: 0 0 1px #2196F3;
 }
 
-input:checked + #slider:before {
+input:checked + .slider:before {
   transform: translateX(10px);
 }
 
@@ -272,13 +272,13 @@ input:checked + #slider:before {
   align-self: center;
 }
 
-#card-read {
+.card-read {
   display: flex;
   flex-direction: row;
   align-items: center;
 }
 
-#read-check {
+.read-check {
   margin-left: auto;
   margin-right: 1rem;
 }
