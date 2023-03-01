@@ -38,17 +38,17 @@
           <span id="modal-close">&times;</span>
         </section>
         <form action="#" method="post" id="form">
-          <input type="text" placeholder="Book Title *" required>
-          <input type="text" placeholder="Author *" required>
+          <input type="text" placeholder="Book Title *" id="bookTitle" required>
+          <input type="text" placeholder="Author *" id="bookAuthor" required>
           <textarea name="synopsis" id="synopsis" cols="30" rows="3" placeholder="Short description (120 characters)..." maxlength="120"></textarea>
-          <section class="read">
+          <section class="read" id="bookRead">
             <span>Read:</span>
             <label class="read-check">
               <input type="checkbox" class="checkbox">
               <span class="slider"></span>
             </label>
           </section>
-          <button type="submit">Add Book</button>
+          <button type="submit" id="addBook">Add Book</button>
         </form>
       </div>
     </div>
@@ -65,11 +65,6 @@
             <span class="slider"></span>
           </label>
         </div>
-      </div>
-      <div class="card">
-        <h2>Title</h2>
-        <h3>By: Me</h3>
-        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit.</p>
       </div>
     </div>
   </div>
