@@ -318,5 +318,5 @@ input:checked + #slider:before {
 .sm-logo {
   height: 24px;
   width: 24px;
-  margin: 12px;
+  margin: 0 12px;
 }
