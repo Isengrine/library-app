@@ -45,7 +45,7 @@ function createLibrary() {
     toggle.setAttribute("class", "slider");
 
     title.innerText = book.title;
-    author.innerText = book.author;
+    author.innerText = `By: ${book.author}`;
     synopsis.innerText = book.synopsis;
     readText.innerText = "Read:";
   });
@@ -82,4 +82,5 @@ submitBtn.onclick = () => {
   addBook();
   clearLibrary();
   createLibrary();
+  modal.style.display = "none";
 }
