@@ -8,12 +8,17 @@ a {
   text-decoration: none;
 }
 
-h1 {
-  font-size: 2.5rem;
+h2 {
+  margin: 12px 0;
+}
+
+h4 {
+  margin: 12px 0;
 }
 
 p {
-  font-size: 1.25rem;
+  font-size: 1rem;
+  margin: 8px 0;
 }
 
 ul {
@@ -258,12 +263,24 @@ input:checked + #slider:before {
 .card {
   height: clamp(160px, 80%, 360px);
   width: clamp(120px, 80%, 280px);
+  margin: 12px;
   padding: 12px;
   background-color: greenyellow;
   border: solid;
   border-radius: 12px;
   justify-self: center;
   align-self: center;
+}
+
+#card-read {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+#read-check {
+  margin-left: auto;
+  margin-right: 1rem;
 }
 
 #footer-container {
