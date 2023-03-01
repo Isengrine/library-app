@@ -91,7 +91,6 @@ modalClose.onclick = () => {
 }
 
 submitBtn.onclick = (event) => {
-  event.preventDefault();
   if (form.checkValidity()) {
     addBook();
     clearLibrary();
