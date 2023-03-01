@@ -9,7 +9,7 @@ function addBook() {
   let bookTitle = document.getElementById("bookTitle").value;
   let bookAuthor = document.getElementById("bookAuthor").value;
   let synopsis = document.getElementById("synopsis").value;
-  let bookRead = document.getElementById("bookRead").checked;
+  let bookRead = document.getElementById("checkbox").checked;
 
   const book = new bookObj(bookTitle, bookAuthor, synopsis, bookRead);
   books.push(book);
@@ -44,6 +44,10 @@ function createLibrary() {
     checkbox.setAttribute("class", "checkbox");
     toggle.setAttribute("class", "slider");
 
+    if (book.read) {
+      checkbox.setAttribute("checked", "");
+    }
+
     title.innerText = book.title;
     author.innerText = `By: ${book.author}`;
     synopsis.innerText = book.synopsis;
@@ -66,7 +70,7 @@ const modalClose = document.getElementById("modal-close");
 const submitBtn = document.getElementById("addBook");
 const cards = document.getElementById("cards");
 
-const book1 = new bookObj("Crime and Punishment", "Dostoievsky", "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eum id maiores ipsam dolor, animi accusantium maxime derpaderp");
+const book1 = new bookObj("Crime and Punishment", "Dostoievsky", "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eum id maiores ipsam dolor, animi accusantium maxime derpaderp", false);
 books.push(book1);
 console.log(books);
 
