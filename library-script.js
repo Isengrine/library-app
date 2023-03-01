@@ -28,24 +28,26 @@ function createLibrary() {
     let toggle = document.createElement("span");
 
     cards.appendChild(card);
-    card.setAttribute("class", "card");
-    title.innerText = book.title;
-    author.innerText = book.author;
-    synopsis.innerText = book.synopsis;
     card.appendChild(title);
     card.appendChild(author);
     card.appendChild(synopsis);
     card.appendChild(cardRead);
-    cardRead.setAttribute("class", "card-read");
-    readText.innerText = "Read:";
     cardRead.appendChild(readText);
     cardRead.appendChild(readCheck);
-    readCheck.setAttribute("class", "read-check");
     readCheck.appendChild(checkbox);
     readCheck.appendChild(toggle);
+
+    card.setAttribute("class", "card");
+    cardRead.setAttribute("class", "card-read");
+    readCheck.setAttribute("class", "read-check");
     checkbox.setAttribute("type", "checkbox");
     checkbox.setAttribute("class", "checkbox");
     toggle.setAttribute("class", "slider");
+
+    title.innerText = book.title;
+    author.innerText = book.author;
+    synopsis.innerText = book.synopsis;
+    readText.innerText = "Read:";
   });
 }
 
@@ -64,7 +66,7 @@ const modalClose = document.getElementById("modal-close");
 const submitBtn = document.getElementById("addBook");
 const cards = document.getElementById("cards");
 
-const book1 = new bookObj("Crime and Punishment", "Dostoievsky");
+const book1 = new bookObj("Crime and Punishment", "Dostoievsky", "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eum id maiores ipsam dolor, animi accusantium maxime derpaderp");
 books.push(book1);
 console.log(books);
 
@@ -76,8 +78,7 @@ modalClose.onclick = () => {
   modal.style.display = "none";
 }
 
-submitBtn.onclick = (event) => {
-  event.preventDefault();
+submitBtn.onclick = () => {
   addBook();
   clearLibrary();
   createLibrary();
