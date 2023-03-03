@@ -40,6 +40,7 @@ function createLibrary() {
     readCheck.appendChild(toggle);
 
     card.setAttribute("class", "card");
+    card.setAttribute("id", `${books.indexOf(book)}`);
     cardRead.setAttribute("class", "card-read");
     readCheck.setAttribute("class", "read-check");
     checkbox.setAttribute("type", "checkbox");
