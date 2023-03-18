@@ -83,12 +83,7 @@ function hasBeenRead() {
   const readCards = document.querySelectorAll(".checkbox");
   readCards.forEach(readCard => {
     readCard.onclick = () => {
-      if (readCard.checked) {
-        console.log("Checked!");
-      }
-      else {
-        console.log("Unchecked!");
-      }
+      books[readCard.closest(".card").id].read = readCard.checked;
     }
   });
 }
