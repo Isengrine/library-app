@@ -79,10 +79,25 @@ function deleteCards() {
   });
 }
 
+function hasBeenRead() {
+  const readCards = document.querySelectorAll(".checkbox");
+  readCards.forEach(readCard => {
+    readCard.onclick = () => {
+      if (readCard.checked) {
+        console.log("Checked!");
+      }
+      else {
+        console.log("Unchecked!");
+      }
+    }
+  });
+}
+
 function initialize() {
   clearLibrary();
   createLibrary();
   deleteCards();
+  hasBeenRead();
   clearForm();
 }
 
@@ -100,9 +115,10 @@ let bookAuthor = document.getElementById("bookAuthor");
 let synopsis = document.getElementById("synopsis");
 let bookRead = document.getElementById("checkbox");
 
-const book1 = new bookObj("Crime and Punishment", "Dostoievsky", "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eum id maiores ipsam dolor, animi accusantium maxime derpaderp", false);
-books.push(book1);
-console.log(books);
+const book = new bookObj("Crime and Punishment", "Dostoievsky", "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eum id maiores ipsam dolor, animi accusantium maxime derpaderp", false);
+books.push(book);
+
+window.onload = initialize();
 
 formBtn.onclick = () => {
   modal.style.display = "block";
