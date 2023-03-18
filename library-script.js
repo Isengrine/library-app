@@ -20,6 +20,8 @@ function clearForm() {
 function createLibrary() {
   books.forEach(book => {
     let card = document.createElement("div");
+    let cardTop = document.createElement("div");
+    let deleteBtn = document.createElement("span");
     let title = document.createElement("h2");
     let author = document.createElement("h4");
     let synopsis = document.createElement("p");
@@ -30,6 +32,8 @@ function createLibrary() {
     let toggle = document.createElement("span");
 
     cards.appendChild(card);
+    card.appendChild(cardTop);
+    cardTop.appendChild(deleteBtn);
     card.appendChild(title);
     card.appendChild(author);
     card.appendChild(synopsis);
@@ -41,6 +45,7 @@ function createLibrary() {
 
     card.setAttribute("class", "card");
     card.setAttribute("id", `${books.indexOf(book)}`);
+    deleteBtn.setAttribute("class", "delete-card");
     cardRead.setAttribute("class", "card-read");
     readCheck.setAttribute("class", "read-check");
     checkbox.setAttribute("type", "checkbox");
@@ -51,6 +56,7 @@ function createLibrary() {
       checkbox.setAttribute("checked", "");
     }
 
+    deleteBtn.innerHTML = "&times;";
     title.innerText = book.title;
     author.innerText = `By: ${book.author}`;
     synopsis.innerText = book.synopsis;
