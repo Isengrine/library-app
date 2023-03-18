@@ -20,7 +20,6 @@ function clearForm() {
 function createLibrary() {
   books.forEach(book => {
     let card = document.createElement("div");
-    let cardTop = document.createElement("div");
     let deleteBtn = document.createElement("span");
     let title = document.createElement("h2");
     let author = document.createElement("h4");
@@ -32,8 +31,7 @@ function createLibrary() {
     let toggle = document.createElement("span");
 
     cards.appendChild(card);
-    card.appendChild(cardTop);
-    cardTop.appendChild(deleteBtn);
+    card.appendChild(deleteBtn);
     card.appendChild(title);
     card.appendChild(author);
     card.appendChild(synopsis);
@@ -71,6 +69,23 @@ function clearLibrary() {
   });
 }
 
+function deleteCards() {
+  const delBtns = document.querySelectorAll(".delete-card");
+  delBtns.forEach(delBtn => {
+    delBtn.onclick = (e) => {
+      books.splice(e.target.parentNode.id, 1);
+      initialize();
+    }
+  });
+}
+
+function initialize() {
+  clearLibrary();
+  createLibrary();
+  deleteCards();
+  clearForm();
+}
+
 let books = [];
 
 const modal = document.getElementById("modal-box-background");
@@ -97,12 +112,10 @@ modalClose.onclick = () => {
   modal.style.display = "none";
 }
 
-submitBtn.onclick = (event) => {
+submitBtn.onclick = () => {
   if (form.checkValidity()) {
     addBook();
-    clearLibrary();
-    createLibrary();
-    clearForm();
+    initialize();
     modal.style.display = "none";
   }
 }
