@@ -72,8 +72,8 @@ function clearLibrary() {
 function deleteCards() {
   const delBtns = document.querySelectorAll(".delete-card");
   delBtns.forEach(delBtn => {
-    delBtn.onclick = (e) => {
-      books.splice(e.target.parentNode.id, 1);
+    delBtn.onclick = () => {
+      books.splice(delBtn.closest(".card").id, 1);
       initialize();
     }
   });
