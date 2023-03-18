@@ -9,7 +9,7 @@ a {
 }
 
 h2 {
-  margin: 12px 0;
+  margin: 0;
 }
 
 h4 {
@@ -271,6 +271,19 @@ input:checked + .slider:before {
   border-radius: 12px;
   justify-self: center;
   align-self: center;
+}
+
+.delete-card {
+  margin-left: 95%;
+  font-size: 1rem;
+  padding: 0.2rem;
+  user-select: none;
+}
+
+.delete-card:hover {
+  background-color: green;
+  border-radius: 4px;
+  cursor: pointer;
 }
 
 .card-read {
